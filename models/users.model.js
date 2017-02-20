@@ -5,9 +5,9 @@ var Schema = mongoose.Schema;
 
 var usersSchema = new Schema({
   username : {type: String, required: true},
-  skill   : [{
-      skillsId  : {type: Schema.Types.ObjectId, ref: 'Skills'},
-      score     : {type: Number, max: 5}
+  skills    : [{
+      skill  : {type: Schema.Types.ObjectId, ref: 'Skills'},
+      score  : Number
   }]
 },
 {
